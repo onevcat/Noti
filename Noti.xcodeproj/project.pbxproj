@@ -262,7 +262,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "brew bundle\n\nsourcery --sources ./Sources --templates ./Templates --output ./Sources/Generated";
+			shellScript = "export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin\nbrew bundle\nsourcery --sources ./Sources --templates ./Templates --output ./Sources/Generated";
 		};
 /* End PBXShellScriptBuildPhase section */
 
