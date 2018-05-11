@@ -47,3 +47,17 @@ public struct EmptyNotificationPayload: NotificationPayload {
     public init(_ notification: Notification) {}
     public var userInfo: [AnyHashable: Any] { return [:] }
 }
+
+extension Notification {
+    func extract<T>(key: String, type: T.Type) -> T {
+        return userInfo![key] as! T
+    }
+    
+    func extract<T, U>(key: String, type: T.Type, transform: (T) -> U) -> U {
+        let value = extract(key: key, type: type)
+        return transform(value)
+    }
+}
+
+// For auto generating of payload
+protocol AutoNotificationPayload {}

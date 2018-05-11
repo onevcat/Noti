@@ -24,3 +24,6 @@ public protocol EmptyPayloadTypedNotification: TypedNotification
 extension EmptyPayloadTypedNotification {
     public var payload: Payload { return .empty }
 }
+
+// For auto generating of notification
+protocol AutoTypedNotification {}

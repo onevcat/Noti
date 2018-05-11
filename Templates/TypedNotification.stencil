@@ -1,0 +1,14 @@
+{% for notification in types.implementing.AutoTypedNotification %}
+{%if notification.annotations.payload or notification.containedType.Payload %}
+extension {{notification.name}}: TypedNotification {
+{% else %}
+extension {{notification.name}}: EmptyPayloadTypedNotification {
+    public let payload: Payload
+{% endif %}
+    {%if notification.annotations.name %}
+    {% else %}
+    public static let name: Notification.Name = .{{notification.name | replace:"Notification",""}}
+    {% endif %}
+}
+
+{% endfor %}
