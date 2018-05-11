@@ -11,6 +11,10 @@
 		28F828811C494B2C00330CF4 /* Noti.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F828801C494B2C00330CF4 /* Noti.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28F828881C494B2C00330CF4 /* Noti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F8287D1C494B2C00330CF4 /* Noti.framework */; };
 		28F8289A1C494B4200330CF4 /* iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F828991C494B4200330CF4 /* iOS.swift */; };
+		4BFAFCC720A535A200855D80 /* NotificationPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAFCC620A535A200855D80 /* NotificationPayload.swift */; };
+		4BFAFCC920A540BB00855D80 /* TypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAFCC820A540BB00855D80 /* TypedNotification.swift */; };
+		4BFAFCCB20A541C800855D80 /* NotificationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAFCCA20A541C800855D80 /* NotificationToken.swift */; };
+		4BFAFCCD20A5421E00855D80 /* NotificationCenter+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAFCCC20A5421E00855D80 /* NotificationCenter+Noti.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,10 @@
 		28F8288E1C494B2C00330CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28F828991C494B4200330CF4 /* iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOS.swift; sourceTree = "<group>"; };
 		28F8289B1C494BF100330CF4 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Playground.playground; path = Example/Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4BFAFCC620A535A200855D80 /* NotificationPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPayload.swift; sourceTree = "<group>"; };
+		4BFAFCC820A540BB00855D80 /* TypedNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedNotification.swift; sourceTree = "<group>"; };
+		4BFAFCCA20A541C800855D80 /* NotificationToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationToken.swift; sourceTree = "<group>"; };
+		4BFAFCCC20A5421E00855D80 /* NotificationCenter+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Noti.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +92,23 @@
 		28F828971C494B4200330CF4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4BFAFCC520A5358000855D80 /* Core */,
 				28F828991C494B4200330CF4 /* iOS.swift */,
 				28F828801C494B2C00330CF4 /* Noti.h */,
 				28F828821C494B2C00330CF4 /* Info.plist */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		4BFAFCC520A5358000855D80 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4BFAFCC620A535A200855D80 /* NotificationPayload.swift */,
+				4BFAFCCA20A541C800855D80 /* NotificationToken.swift */,
+				4BFAFCC820A540BB00855D80 /* TypedNotification.swift */,
+				4BFAFCCC20A5421E00855D80 /* NotificationCenter+Noti.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +220,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BFAFCCD20A5421E00855D80 /* NotificationCenter+Noti.swift in Sources */,
+				4BFAFCC920A540BB00855D80 /* TypedNotification.swift in Sources */,
 				28F8289A1C494B4200330CF4 /* iOS.swift in Sources */,
+				4BFAFCCB20A541C800855D80 /* NotificationToken.swift in Sources */,
+				4BFAFCC720A535A200855D80 /* NotificationPayload.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
