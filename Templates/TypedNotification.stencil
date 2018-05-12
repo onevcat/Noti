@@ -1,9 +1,12 @@
-{% for notification in types.implementing.AutoTypedNotification %}
+{% for notification in types.implementing.AutoPassiveTypedNotification %}
 {%if notification.annotations.payload or notification.containedType.Payload %}
-extension {{notification.name}}: TypedNotification {
+extension {{notification.name}}: PassiveTypedNotification {
+    {%if notification.annotations.payload %}
+    public typealias Payload = {{notification.annotations.payload}}
+    {%else%}
+    {% endif %}
 {% else %}
 extension {{notification.name}}: EmptyPayloadTypedNotification {
-    public let payload: Payload
 {% endif %}
     {%if notification.annotations.name %}
     {% else %}

@@ -8,7 +8,7 @@
 import Foundation
 
 extension NotificationCenter {
-    public func addObserver<T: TypedNotification, Observer: AnyObject>(
+    public func addObserver<T: PassiveTypedNotification, Observer: AnyObject>(
         forType notificationType: T.Type,
         on observer: Observer,
         object: Any? = nil,
@@ -23,7 +23,7 @@ extension NotificationCenter {
         return .init(token: token, in: self)
     }
     
-    public func addObserver<T: TypedNotification, Observer: Any>(
+    public func addObserver<T: PassiveTypedNotification, Observer: Any>(
         forType notificationType: T.Type,
         on observer: Observer,
         object: Any? = nil,
@@ -37,7 +37,7 @@ extension NotificationCenter {
         return .init(token: token, in: self)
     }
     
-    public func addObserver<T: TypedNotification, Observer: AnyObject>(
+    public func addObserver<T: PassiveTypedNotification, Observer: AnyObject>(
         forType notificationType: T.Type,
         on observer: Observer,
         object: Any? = nil,
@@ -51,7 +51,7 @@ extension NotificationCenter {
         return .init(token: token, in: self)
     }
     
-    public func addObserver<T: TypedNotification, Observer: Any>(
+    public func addObserver<T: PassiveTypedNotification, Observer: Any>(
         forType notificationType: T.Type,
         on observer: Observer,
         object: Any? = nil,

@@ -7,16 +7,19 @@
 
 import Foundation
 
-public protocol TypedNotification {
+public protocol PassiveTypedNotification {
     associatedtype Payload: NotificationPayload
     static var name: Notification.Name { get }
-    var payload: Payload { get }
 }
 
-extension TypedNotification {
+extension PassiveTypedNotification {
     static var name: Notification.Name {
         return .init(rawValue: String(reflecting: Self.self))
     }
+}
+
+public protocol TypedNotification: PassiveTypedNotification {
+    var payload: Payload { get }
 }
 
 public protocol EmptyPayloadTypedNotification: TypedNotification
@@ -26,4 +29,4 @@ extension EmptyPayloadTypedNotification {
 }
 
 // For auto generating of notification
-protocol AutoTypedNotification {}
+protocol AutoPassiveTypedNotification {}

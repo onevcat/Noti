@@ -18,6 +18,7 @@
 		4BFAFCC920A540BB00855D80 /* TypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAFCC820A540BB00855D80 /* TypedNotification.swift */; };
 		4BFAFCCB20A541C800855D80 /* NotificationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAFCCA20A541C800855D80 /* NotificationToken.swift */; };
 		4BFAFCCD20A5421E00855D80 /* NotificationCenter+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAFCCC20A5421E00855D80 /* NotificationCenter+Noti.swift */; };
+		D1FDD60F20A6C3BD00FEACB6 /* TypedNotification.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDD60E20A6C3BD00FEACB6 /* TypedNotification.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		4BFAFCC820A540BB00855D80 /* TypedNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedNotification.swift; sourceTree = "<group>"; };
 		4BFAFCCA20A541C800855D80 /* NotificationToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationToken.swift; sourceTree = "<group>"; };
 		4BFAFCCC20A5421E00855D80 /* NotificationCenter+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Noti.swift"; sourceTree = "<group>"; };
+		D1FDD60E20A6C3BD00FEACB6 /* TypedNotification.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedNotification.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				4B0F4F9720A5938300C59EBC /* NotificationPayload.generated.swift */,
+				D1FDD60E20A6C3BD00FEACB6 /* TypedNotification.generated.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			files = (
 				4BFAFCCD20A5421E00855D80 /* NotificationCenter+Noti.swift in Sources */,
 				4BFAFCC920A540BB00855D80 /* TypedNotification.swift in Sources */,
+				D1FDD60F20A6C3BD00FEACB6 /* TypedNotification.generated.swift in Sources */,
 				4B0F4F9A20A5949600C59EBC /* Keyboard.swift in Sources */,
 				4B0F4F9820A5938300C59EBC /* NotificationPayload.generated.swift in Sources */,
 				4BFAFCCB20A541C800855D80 /* NotificationToken.swift in Sources */,
