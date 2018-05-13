@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 struct DataTransformer {
     #if canImport(UIKit)

@@ -18,6 +18,7 @@
 		4BFAFCC920A540BB00855D80 /* TypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAFCC820A540BB00855D80 /* TypedNotification.swift */; };
 		4BFAFCCB20A541C800855D80 /* NotificationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAFCCA20A541C800855D80 /* NotificationToken.swift */; };
 		4BFAFCCD20A5421E00855D80 /* NotificationCenter+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAFCCC20A5421E00855D80 /* NotificationCenter+Noti.swift */; };
+		D1909D5020A7F85E00440171 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1909D4F20A7F85E00440171 /* Audio.swift */; };
 		D1FDD60F20A6C3BD00FEACB6 /* TypedNotification.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDD60E20A6C3BD00FEACB6 /* TypedNotification.generated.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		4BFAFCC820A540BB00855D80 /* TypedNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedNotification.swift; sourceTree = "<group>"; };
 		4BFAFCCA20A541C800855D80 /* NotificationToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationToken.swift; sourceTree = "<group>"; };
 		4BFAFCCC20A5421E00855D80 /* NotificationCenter+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Noti.swift"; sourceTree = "<group>"; };
+		D1909D4F20A7F85E00440171 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		D1FDD60E20A6C3BD00FEACB6 /* TypedNotification.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedNotification.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 		4B0F4F9120A58E2D00C59EBC /* Definition */ = {
 			isa = PBXGroup;
 			children = (
+				D1909D4E20A7F85000440171 /* AVFoundation */,
 				4B0F4F9220A58E3F00C59EBC /* UIKit */,
 			);
 			path = Definition;
@@ -145,6 +148,14 @@
 				4B0F4F8A20A57B2F00C59EBC /* DataTransformer.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		D1909D4E20A7F85000440171 /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				D1909D4F20A7F85E00440171 /* Audio.swift */,
+			);
+			path = AVFoundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1909D5020A7F85E00440171 /* Audio.swift in Sources */,
 				4BFAFCCD20A5421E00855D80 /* NotificationCenter+Noti.swift in Sources */,
 				4BFAFCC920A540BB00855D80 /* TypedNotification.swift in Sources */,
 				D1FDD60F20A6C3BD00FEACB6 /* TypedNotification.generated.swift in Sources */,

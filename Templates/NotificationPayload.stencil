@@ -1,6 +1,8 @@
-{% for payload in types.implementing.AutoNotificationPayload %}
+import AVFoundation
+
+{% for payload in types.implementing.AutoPassiveNotificationPayload %}
     
-extension {{payload.name}}: NotificationPayload {
+extension {{payload.name}}: PassiveNotificationPayload {
     public init(_ notification: Notification) {
         {% for val in payload.storedVariables %}
         {% if val.annotations.type %}
@@ -9,14 +11,6 @@ extension {{payload.name}}: NotificationPayload {
         {{val.name}} = notification.extract(key: {{val.annotations.key}}, type: {{val.typeName}}.self)
         {% endif %}
         {% endfor %}
-    }
-
-    public var userInfo: [AnyHashable : Any] {
-        return [
-            {% for val in payload.storedVariables %}
-            {{val.annotations.key}}: {{val.name}}{% if not forloop.last %},{% endif %}
-            {% endfor %}
-        ]
     }
 }
 

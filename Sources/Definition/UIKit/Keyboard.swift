@@ -6,7 +6,7 @@
 //
 import UIKit
 
-public struct UIKeyboardNotificationPayload: AutoNotificationPayload {
+public struct UIKeyboardNotificationPayload: AutoPassiveNotificationPayload {
     //sourcery: key = "UIKeyboardAnimationCurveUserInfoKey"
     //sourcery: type = "NSNumber"
     public let animationCurve: UIViewAnimationCurve
@@ -24,5 +24,15 @@ public struct UIKeyboardNotificationPayload: AutoNotificationPayload {
     public let frameEnd: CGRect
 }
 
+//sourcery: payload = "UIKeyboardNotificationPayload"
+public struct UIKeyboardDidChangeFrameNotification: AutoPassiveTypedNotification {}
+//sourcery: payload = "UIKeyboardNotificationPayload"
+public struct UIKeyboardDidHideNotification: AutoPassiveTypedNotification {}
+//sourcery: payload = "UIKeyboardNotificationPayload"
+public struct UIKeyboardDidShowNotification: AutoPassiveTypedNotification {}
+//sourcery: payload = "UIKeyboardNotificationPayload"
+public struct UIKeyboardWillChangeFrameNotification: AutoPassiveTypedNotification {}
+//sourcery: payload = "UIKeyboardNotificationPayload"
+public struct UIKeyboardWillHideNotification: AutoPassiveTypedNotification {}
 //sourcery: payload = "UIKeyboardNotificationPayload"
 public struct UIKeyboardWillShowNotification: AutoPassiveTypedNotification {}

@@ -10,8 +10,11 @@ import Foundation
 private let payloadEncoder = JSONEncoder()
 private let payloadDecoder = JSONDecoder()
 
-public protocol NotificationPayload {
+public protocol PassiveNotificationPayload {
     init(_ notification: Notification)
+}
+
+public protocol NotificationPayload: PassiveNotificationPayload {
     var userInfo: [AnyHashable: Any] { get }
 }
 
@@ -60,4 +63,4 @@ extension Notification {
 }
 
 // For auto generating of payload
-protocol AutoNotificationPayload {}
+protocol AutoPassiveNotificationPayload {}

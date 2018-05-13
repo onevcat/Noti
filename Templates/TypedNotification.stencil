@@ -1,3 +1,6 @@
+import Foundation
+import AVFoundation
+
 {% for notification in types.implementing.AutoPassiveTypedNotification %}
 {%if notification.annotations.payload or notification.containedType.Payload %}
 extension {{notification.name}}: PassiveTypedNotification {
@@ -6,7 +9,7 @@ extension {{notification.name}}: PassiveTypedNotification {
     {%else%}
     {% endif %}
 {% else %}
-extension {{notification.name}}: EmptyPayloadTypedNotification {
+extension {{notification.name}}: EmptyPayloadPassiveTypedNotification {
 {% endif %}
     {%if notification.annotations.name %}
     {% else %}

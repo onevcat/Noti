@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol PassiveTypedNotification {
-    associatedtype Payload: NotificationPayload
+    associatedtype Payload: PassiveNotificationPayload
     static var name: Notification.Name { get }
 }
 
@@ -18,9 +18,14 @@ extension PassiveTypedNotification {
     }
 }
 
-public protocol TypedNotification: PassiveTypedNotification {
+public protocol TypedNotification: PassiveTypedNotification
+    where Payload: NotificationPayload
+{    
     var payload: Payload { get }
 }
+
+public protocol EmptyPayloadPassiveTypedNotification: PassiveTypedNotification
+    where Payload == EmptyNotificationPayload { }
 
 public protocol EmptyPayloadTypedNotification: TypedNotification
     where Payload == EmptyNotificationPayload { }
