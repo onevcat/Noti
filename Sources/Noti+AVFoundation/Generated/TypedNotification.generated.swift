@@ -6,7 +6,8 @@ import Noti
 import AVFoundation
 
 extension AVAudioEngineConfigurationChangeNotification: EmptyPayloadPassiveTypedNotification {
-    public static let name: Notification.Name = .AVAudioEngineConfigurationChange
+    public static let name: Notification.Name = .AVAssetTrackTrackAssociationsDidChange
+    
 }
 
 extension AVAudioSessionInterruptionNotification: PassiveTypedNotification {

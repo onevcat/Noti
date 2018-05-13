@@ -1,5 +1,5 @@
 //
-//  Audio.swift
+//  AVFoundation.swift
 //  Noti
 //
 //  Created by 王 巍 on 2018/5/12.
@@ -10,7 +10,6 @@ import Noti
 import AVFoundation
 
 public struct AVAudioEngineConfigurationChangeNotification: AutoPassiveTypedNotification {}
-
 public struct AVAudioSessionInterruptionNotification: AutoPassiveTypedNotification {
     public struct Payload: PassiveNotificationPayload {
         public enum InterruptionType {

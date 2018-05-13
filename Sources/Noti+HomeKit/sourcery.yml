@@ -1,0 +1,14 @@
+sources:
+  include:
+    - ./
+    - ../Core
+  exclude:
+    - ../Core/Definition
+args:
+  imports: 
+    - Noti
+    - HomeKit
+templates:
+  - ../../Templates
+output:
+  ./Generated
