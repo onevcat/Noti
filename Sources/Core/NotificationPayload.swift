@@ -52,15 +52,15 @@ public struct EmptyNotificationPayload: NotificationPayload {
 }
 
 extension Notification {
-    func extract<T>(key: String, type: T.Type) -> T {
+    public func extract<T>(key: String, type: T.Type) -> T {
         return userInfo![key] as! T
     }
     
-    func extract<T, U>(key: String, type: T.Type, transform: (T) -> U) -> U {
+    public func extract<T, U>(key: String, type: T.Type, transform: (T) -> U) -> U {
         let value = extract(key: key, type: type)
         return transform(value)
     }
 }
 
 // For auto generating of payload
-protocol AutoPassiveNotificationPayload {}
+public protocol AutoPassiveNotificationPayload {}

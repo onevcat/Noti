@@ -1,5 +1,6 @@
-import Foundation
-import AVFoundation
+{% for framework in argument.imports %}
+import {{framework}}
+{% endfor %}
 
 {% for notification in types.implementing.AutoPassiveTypedNotification %}
 {%if notification.annotations.payload or notification.containedType.Payload %}

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Noti
 import AVFoundation
 
 public struct AVAudioEngineConfigurationChangeNotification: AutoPassiveTypedNotification {}

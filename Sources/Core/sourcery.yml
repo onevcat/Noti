@@ -1,0 +1,7 @@
+sources:
+  include:
+    - ./
+templates:
+  - ../../Templates
+output:
+  ./Generated

@@ -1,4 +1,6 @@
-import AVFoundation
+{% for framework in argument.imports %}
+import {{framework}}
+{% endfor %}
 
 {% for payload in types.implementing.AutoPassiveNotificationPayload %}
     

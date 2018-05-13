@@ -18,12 +18,22 @@
 		4BFAFCC920A540BB00855D80 /* TypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAFCC820A540BB00855D80 /* TypedNotification.swift */; };
 		4BFAFCCB20A541C800855D80 /* NotificationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAFCCA20A541C800855D80 /* NotificationToken.swift */; };
 		4BFAFCCD20A5421E00855D80 /* NotificationCenter+Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAFCCC20A5421E00855D80 /* NotificationCenter+Noti.swift */; };
-		D1909D5020A7F85E00440171 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1909D4F20A7F85E00440171 /* Audio.swift */; };
+		D1909D7D20A82E1400440171 /* NotiAVFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = D1909D7B20A82E1400440171 /* NotiAVFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1909D8920A841AC00440171 /* TypedNotification.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1909D8720A841AC00440171 /* TypedNotification.generated.swift */; };
+		D1909D8A20A841AC00440171 /* NotificationPayload.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1909D8820A841AC00440171 /* NotificationPayload.generated.swift */; };
+		D1909D8B20A841C200440171 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1909D4F20A7F85E00440171 /* Audio.swift */; };
 		D1FDD60F20A6C3BD00FEACB6 /* TypedNotification.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDD60E20A6C3BD00FEACB6 /* TypedNotification.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		28F828891C494B2C00330CF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28F828741C494B2C00330CF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28F8287C1C494B2C00330CF4;
+			remoteInfo = Noti;
+		};
+		D1909D8320A82F0C00440171 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 28F828741C494B2C00330CF4 /* Project object */;
 			proxyType = 1;
@@ -49,6 +59,11 @@
 		4BFAFCCA20A541C800855D80 /* NotificationToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationToken.swift; sourceTree = "<group>"; };
 		4BFAFCCC20A5421E00855D80 /* NotificationCenter+Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Noti.swift"; sourceTree = "<group>"; };
 		D1909D4F20A7F85E00440171 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		D1909D7920A82E1400440171 /* NotiAVFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NotiAVFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1909D7B20A82E1400440171 /* NotiAVFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotiAVFoundation.h; sourceTree = "<group>"; };
+		D1909D7C20A82E1400440171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1909D8720A841AC00440171 /* TypedNotification.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedNotification.generated.swift; sourceTree = "<group>"; };
+		D1909D8820A841AC00440171 /* NotificationPayload.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationPayload.generated.swift; sourceTree = "<group>"; };
 		D1FDD60E20A6C3BD00FEACB6 /* TypedNotification.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedNotification.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +80,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				28F828881C494B2C00330CF4 /* Noti.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1909D7520A82E1400440171 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +108,7 @@
 			children = (
 				28F8287D1C494B2C00330CF4 /* Noti.framework */,
 				28F828871C494B2C00330CF4 /* NotiTests.xctest */,
+				D1909D7920A82E1400440171 /* NotiAVFoundation.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,22 +126,12 @@
 		28F828971C494B4200330CF4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4B0F4F9520A58FC300C59EBC /* Generated */,
-				4B0F4F9120A58E2D00C59EBC /* Definition */,
+				D1909D7A20A82E1400440171 /* NotiAVFoundation */,
 				4BFAFCC520A5358000855D80 /* Core */,
 				28F828801C494B2C00330CF4 /* Noti.h */,
 				28F828821C494B2C00330CF4 /* Info.plist */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		4B0F4F9120A58E2D00C59EBC /* Definition */ = {
-			isa = PBXGroup;
-			children = (
-				D1909D4E20A7F85000440171 /* AVFoundation */,
-				4B0F4F9220A58E3F00C59EBC /* UIKit */,
-			);
-			path = Definition;
 			sourceTree = "<group>";
 		};
 		4B0F4F9220A58E3F00C59EBC /* UIKit */ = {
@@ -141,6 +154,8 @@
 		4BFAFCC520A5358000855D80 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D1909D8120A82E8F00440171 /* Definition */,
+				4B0F4F9520A58FC300C59EBC /* Generated */,
 				4BFAFCC620A535A200855D80 /* NotificationPayload.swift */,
 				4BFAFCC820A540BB00855D80 /* TypedNotification.swift */,
 				4BFAFCCA20A541C800855D80 /* NotificationToken.swift */,
@@ -158,6 +173,42 @@
 			path = AVFoundation;
 			sourceTree = "<group>";
 		};
+		D1909D7A20A82E1400440171 /* NotiAVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				D1909D8220A82EAF00440171 /* Definition */,
+				D1909D8620A841AC00440171 /* Generated */,
+				D1909D7B20A82E1400440171 /* NotiAVFoundation.h */,
+				D1909D7C20A82E1400440171 /* Info.plist */,
+			);
+			path = NotiAVFoundation;
+			sourceTree = "<group>";
+		};
+		D1909D8120A82E8F00440171 /* Definition */ = {
+			isa = PBXGroup;
+			children = (
+				4B0F4F9220A58E3F00C59EBC /* UIKit */,
+			);
+			path = Definition;
+			sourceTree = "<group>";
+		};
+		D1909D8220A82EAF00440171 /* Definition */ = {
+			isa = PBXGroup;
+			children = (
+				D1909D4E20A7F85000440171 /* AVFoundation */,
+			);
+			path = Definition;
+			sourceTree = "<group>";
+		};
+		D1909D8620A841AC00440171 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				D1909D8720A841AC00440171 /* TypedNotification.generated.swift */,
+				D1909D8820A841AC00440171 /* NotificationPayload.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -166,6 +217,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				28F828811C494B2C00330CF4 /* Noti.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1909D7620A82E1400440171 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1909D7D20A82E1400440171 /* NotiAVFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +268,26 @@
 			productReference = 28F828871C494B2C00330CF4 /* NotiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D1909D7820A82E1400440171 /* NotiAVFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1909D8020A82E1400440171 /* Build configuration list for PBXNativeTarget "NotiAVFoundation" */;
+			buildPhases = (
+				D1909D8520A82F1000440171 /* Install Sourcery & Generate Code */,
+				D1909D7420A82E1400440171 /* Sources */,
+				D1909D7520A82E1400440171 /* Frameworks */,
+				D1909D7620A82E1400440171 /* Headers */,
+				D1909D7720A82E1400440171 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1909D8420A82F0C00440171 /* PBXTargetDependency */,
+			);
+			name = NotiAVFoundation;
+			productName = NotiAVFoundation;
+			productReference = D1909D7920A82E1400440171 /* NotiAVFoundation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -226,6 +305,11 @@
 						CreatedOnToolsVersion = 7.2;
 						LastSwiftMigration = 0800;
 					};
+					D1909D7820A82E1400440171 = {
+						CreatedOnToolsVersion = 9.3.1;
+						DevelopmentTeam = T499X543T7;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 28F828771C494B2C00330CF4 /* Build configuration list for PBXProject "Noti" */;
@@ -242,6 +326,7 @@
 			targets = (
 				28F8287C1C494B2C00330CF4 /* Noti */,
 				28F828861C494B2C00330CF4 /* NotiTests */,
+				D1909D7820A82E1400440171 /* NotiAVFoundation */,
 			);
 		};
 /* End PBXProject section */
@@ -255,6 +340,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		28F828851C494B2C00330CF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1909D7720A82E1400440171 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -276,7 +368,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin\nbrew bundle\nsourcery --sources ./Sources --templates ./Templates --output ./Sources/Generated";
+			shellScript = "export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin\nbrew bundle\nsourcery --config ./Sources/Core/sourcery.yml";
+		};
+		D1909D8520A82F1000440171 /* Install Sourcery & Generate Code */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Install Sourcery & Generate Code";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin\nbrew bundle\nsourcery --config ./Sources/NotiAVFoundation/sourcery.yml";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -285,7 +391,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1909D5020A7F85E00440171 /* Audio.swift in Sources */,
 				4BFAFCCD20A5421E00855D80 /* NotificationCenter+Noti.swift in Sources */,
 				4BFAFCC920A540BB00855D80 /* TypedNotification.swift in Sources */,
 				D1FDD60F20A6C3BD00FEACB6 /* TypedNotification.generated.swift in Sources */,
@@ -306,6 +411,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D1909D7420A82E1400440171 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1909D8B20A841C200440171 /* Audio.swift in Sources */,
+				D1909D8A20A841AC00440171 /* NotificationPayload.generated.swift in Sources */,
+				D1909D8920A841AC00440171 /* TypedNotification.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -313,6 +428,11 @@
 			isa = PBXTargetDependency;
 			target = 28F8287C1C494B2C00330CF4 /* Noti */;
 			targetProxy = 28F828891C494B2C00330CF4 /* PBXContainerItemProxy */;
+		};
+		D1909D8420A82F0C00440171 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28F8287C1C494B2C00330CF4 /* Noti */;
+			targetProxy = D1909D8320A82F0C00440171 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -488,6 +608,65 @@
 			};
 			name = Release;
 		};
+		D1909D7E20A82E1400440171 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T499X543T7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/NotiAVFoundation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.onevcat.NotiAVFoundation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1909D7F20A82E1400440171 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T499X543T7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/NotiAVFoundation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.onevcat.NotiAVFoundation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -514,6 +693,15 @@
 			buildConfigurations = (
 				28F828951C494B2C00330CF4 /* Debug */,
 				28F828961C494B2C00330CF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1909D8020A82E1400440171 /* Build configuration list for PBXNativeTarget "NotiAVFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1909D7E20A82E1400440171 /* Debug */,
+				D1909D7F20A82E1400440171 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

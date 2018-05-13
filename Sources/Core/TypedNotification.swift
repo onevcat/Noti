@@ -20,7 +20,7 @@ extension PassiveTypedNotification {
 
 public protocol TypedNotification: PassiveTypedNotification
     where Payload: NotificationPayload
-{    
+{
     var payload: Payload { get }
 }
 
@@ -34,4 +34,4 @@ extension EmptyPayloadTypedNotification {
 }
 
 // For auto generating of notification
-protocol AutoPassiveTypedNotification {}
+public protocol AutoPassiveTypedNotification {}
