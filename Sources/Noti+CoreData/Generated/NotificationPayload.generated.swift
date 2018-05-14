@@ -11,3 +11,15 @@ extension NSManagedObjectContextWillSaveNotification.Payload: PassiveNotificatio
     }
 }
 
+extension NSPersistentStoreCoordinatorStoresWillChangeNotification.Payload: PassiveNotificationPayload {
+    public init(_ notification: Notification) {
+        coordinator = notification.object as! NSPersistentStoreCoordinator
+    }
+}
+
+extension NSPersistentStoreCoordinatorWillRemoveStoreNotification.Payload: PassiveNotificationPayload {
+    public init(_ notification: Notification) {
+        coordinator = notification.object as! NSPersistentStoreCoordinator
+    }
+}
+

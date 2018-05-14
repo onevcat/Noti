@@ -19,3 +19,15 @@ extension NSManagedObjectContextWillSaveNotification: PassiveTypedNotification {
     public static let name: Notification.Name = .NSManagedObjectContextWillSave
 }
 
+extension NSPersistentStoreCoordinatorStoresDidChangeNotification: PassiveTypedNotification {
+    public static let name: Notification.Name = .NSPersistentStoreCoordinatorStoresDidChange
+}
+
+extension NSPersistentStoreCoordinatorStoresWillChangeNotification: PassiveTypedNotification {
+    public static let name: Notification.Name = .NSPersistentStoreCoordinatorStoresWillChange
+}
+
+extension NSPersistentStoreCoordinatorWillRemoveStoreNotification: PassiveTypedNotification {
+    public static let name: Notification.Name = .NSPersistentStoreCoordinatorWillRemoveStore
+}
+

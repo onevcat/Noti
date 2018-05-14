@@ -55,6 +55,86 @@ extension NSHTTPCookieManagerCookiesChangedNotification: PassiveTypedNotificatio
     public static let name: Notification.Name = .NSHTTPCookieManagerCookiesChanged
 }
 
+extension NSMetadataQueryDidFinishGatheringNotification: EmptyPayloadPassiveTypedNotification {
+    public static let name: Notification.Name = .NSMetadataQueryDidFinishGathering
+}
+
+extension NSMetadataQueryDidStartGatheringNotification: EmptyPayloadPassiveTypedNotification {
+    public static let name: Notification.Name = .NSMetadataQueryDidStartGathering
+}
+
+extension NSMetadataQueryDidUpdateNotification: EmptyPayloadPassiveTypedNotification {
+    public static let name: Notification.Name = .NSMetadataQueryDidUpdate
+}
+
+extension NSMetadataQueryGatheringProgressNotification: EmptyPayloadPassiveTypedNotification {
+    public static let name: Notification.Name = .NSMetadataQueryGatheringProgress
+}
+
+extension NSProcessInfoPowerStateDidChangeNotification: PassiveTypedNotification {
+    public static let name: Notification.Name = .NSProcessInfoPowerStateDidChange
+}
+
+extension NSSystemClockDidChangeNotification: EmptyPayloadPassiveTypedNotification {
+    public static let name: Notification.Name = .NSSystemClockDidChange
+}
+
+extension NSSystemTimeZoneDidChangeNotification: EmptyPayloadPassiveTypedNotification {
+    public static let name: Notification.Name = .NSSystemTimeZoneDidChange
+}
+
+extension NSThreadWillExitNotification: PassiveTypedNotification {
+    public static let name: Notification.Name = .NSThreadWillExit
+}
+
+extension NSURLCredentialStorageChangedNotification: PassiveTypedNotification {
+    public static let name: Notification.Name = .NSURLCredentialStorageChanged
+}
+
+extension NSUbiquityIdentityDidChangeNotification: EmptyPayloadPassiveTypedNotification {
+    public static let name: Notification.Name = .NSUbiquityIdentityDidChange
+}
+
+extension NSUndoManagerCheckpointNotification: PassiveTypedNotification {
+    public typealias Payload = UndoManagerNotificationPayload
+    public static let name: Notification.Name = .NSUndoManagerCheckpoint
+}
+
+extension NSUndoManagerDidCloseUndoGroupNotification: PassiveTypedNotification {
+    public typealias Payload = UndoManagerNotificationPayload
+    public static let name: Notification.Name = .NSUndoManagerDidCloseUndoGroup
+}
+
+extension NSUndoManagerDidOpenUndoGroupNotification: PassiveTypedNotification {
+    public typealias Payload = UndoManagerNotificationPayload
+    public static let name: Notification.Name = .NSUndoManagerDidOpenUndoGroup
+}
+
+extension NSUndoManagerDidRedoChangeNotification: PassiveTypedNotification {
+    public typealias Payload = UndoManagerNotificationPayload
+    public static let name: Notification.Name = .NSUndoManagerDidRedoChange
+}
+
+extension NSUndoManagerDidUndoChangeNotification: PassiveTypedNotification {
+    public typealias Payload = UndoManagerNotificationPayload
+    public static let name: Notification.Name = .NSUndoManagerDidUndoChange
+}
+
+extension NSUndoManagerWillCloseUndoGroupNotification: PassiveTypedNotification {
+    public typealias Payload = UndoManagerNotificationPayload
+    public static let name: Notification.Name = .NSUndoManagerWillCloseUndoGroup
+}
+
+extension NSUndoManagerWillRedoChangeNotification: PassiveTypedNotification {
+    public typealias Payload = UndoManagerNotificationPayload
+    public static let name: Notification.Name = .NSUndoManagerWillRedoChange
+}
+
+extension NSUndoManagerWillUndoChangeNotification: PassiveTypedNotification {
+    public typealias Payload = UndoManagerNotificationPayload
+    public static let name: Notification.Name = .NSUndoManagerWillUndoChange
+}
+
 extension UIKeyboardDidChangeFrameNotification: PassiveTypedNotification {
     public typealias Payload = UIKeyboardNotificationPayload
     public static let name: Notification.Name = .UIKeyboardDidChangeFrame
