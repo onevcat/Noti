@@ -1,0 +1,14 @@
+sources:
+  include:
+    - ./
+    - ../Core
+  exclude:
+    - ../Core/Definition
+args:
+  imports: 
+    - Noti
+    - CoreData
+templates:
+  - ../../Templates
+output:
+  ./Generated
