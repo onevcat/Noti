@@ -35,6 +35,22 @@ extension NSExtensionHostWillResignActiveNotification: PassiveTypedNotification 
     public static let name: Notification.Name = .NSExtensionHostWillResignActive
 }
 
+extension NSFileHandleConnectionAcceptedNotification: PassiveTypedNotification {
+    public static let name: Notification.Name = .NSFileHandleConnectionAccepted
+}
+
+extension NSFileHandleDataAvailableNotification: PassiveTypedNotification {
+    public static let name: Notification.Name = .NSFileHandleDataAvailable
+}
+
+extension NSFileHandleReadToEndOfFileCompletionNotification: PassiveTypedNotification {
+    public static let name: Notification.Name = .NSFileHandleReadToEndOfFileCompletion
+}
+
+extension NSHTTPCookieManagerAcceptPolicyChangedNotification: PassiveTypedNotification {
+    public static let name: Notification.Name = .NSHTTPCookieManagerAcceptPolicyChanged
+}
+
 extension UIKeyboardDidChangeFrameNotification: PassiveTypedNotification {
     public typealias Payload = UIKeyboardNotificationPayload
     public static let name: Notification.Name = .UIKeyboardDidChangeFrame

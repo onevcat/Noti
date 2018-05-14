@@ -42,7 +42,7 @@
 		D1909E0120A8872C00440171 /* HealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1909E0020A8872C00440171 /* HealthKit.swift */; };
 		D1909E0520A8879500440171 /* TypedNotification.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1909E0320A8879500440171 /* TypedNotification.generated.swift */; };
 		D1909E0620A8879500440171 /* NotificationPayload.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1909E0420A8879500440171 /* NotificationPayload.generated.swift */; };
-		D1909E0920A88B9400440171 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1909E0820A88B9400440171 /* Bundle.swift */; };
+		D1909E0920A88B9400440171 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1909E0820A88B9400440171 /* Foundation.swift */; };
 		D1FDD60F20A6C3BD00FEACB6 /* TypedNotification.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDD60E20A6C3BD00FEACB6 /* TypedNotification.generated.swift */; };
 /* End PBXBuildFile section */
 
@@ -150,7 +150,7 @@
 		D1909E0020A8872C00440171 /* HealthKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKit.swift; sourceTree = "<group>"; };
 		D1909E0320A8879500440171 /* TypedNotification.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedNotification.generated.swift; sourceTree = "<group>"; };
 		D1909E0420A8879500440171 /* NotificationPayload.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationPayload.generated.swift; sourceTree = "<group>"; };
-		D1909E0820A88B9400440171 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		D1909E0820A88B9400440171 /* Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
 		D1FDD60E20A6C3BD00FEACB6 /* TypedNotification.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedNotification.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -477,7 +477,7 @@
 		D1909E0720A88B7D00440171 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				D1909E0820A88B9400440171 /* Bundle.swift */,
+				D1909E0820A88B9400440171 /* Foundation.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -941,7 +941,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BFAFCCD20A5421E00855D80 /* NotificationCenter+Noti.swift in Sources */,
-				D1909E0920A88B9400440171 /* Bundle.swift in Sources */,
+				D1909E0920A88B9400440171 /* Foundation.swift in Sources */,
 				4BFAFCC920A540BB00855D80 /* TypedNotification.swift in Sources */,
 				D1FDD60F20A6C3BD00FEACB6 /* TypedNotification.generated.swift in Sources */,
 				4B0F4F9A20A5949600C59EBC /* Keyboard.swift in Sources */,

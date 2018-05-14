@@ -7,7 +7,9 @@ import {{framework}}
 extension {{payload.name}}: PassiveNotificationPayload {
     public init(_ notification: Notification) {
         {% for val in payload.storedVariables %}
-        {% if val.annotations.type %}
+        {% if val.annotations.object %}
+        {{val.name}} = notification.object as! {{val.typeName}}
+        {% elif val.annotations.type %}
         {{val.name}} = notification.extract(key: {{val.annotations.key}}, type: {{val.annotations.type}}.self, transform: DataTransformer.to)
         {% else %}
         {{val.name}} = notification.extract(key: {{val.annotations.key}}, type: {{val.typeName}}.self)
