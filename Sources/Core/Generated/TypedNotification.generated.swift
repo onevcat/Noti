@@ -135,6 +135,18 @@ extension NSUndoManagerWillUndoChangeNotification: PassiveTypedNotification {
     public static let name: Notification.Name = .NSUndoManagerWillUndoChange
 }
 
+extension NSWillBecomeMultiThreadedNotification: EmptyPayloadPassiveTypedNotification {
+    public static let name: Notification.Name = .NSWillBecomeMultiThreaded
+}
+
+extension UIAccessibilityAnnouncementDidFinishNotification: PassiveTypedNotification {
+    public static let name: Notification.Name = .UIAccessibilityAnnouncementDidFinish
+}
+
+extension UIAccessibilityElementFocusedNotification: PassiveTypedNotification {
+    public static let name: Notification.Name = .UIAccessibilityElementFocused
+}
+
 extension UIKeyboardDidChangeFrameNotification: PassiveTypedNotification {
     public typealias Payload = UIKeyboardNotificationPayload
     public static let name: Notification.Name = .UIKeyboardDidChangeFrame

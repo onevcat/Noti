@@ -45,6 +45,19 @@ extension NSURLCredentialStorageChangedNotification.Payload: PassiveNotification
     }
 }
 
+extension UIAccessibilityAnnouncementDidFinishNotification.Payload: PassiveNotificationPayload {
+    public init(_ notification: Notification) {
+        announcement = notification.extract(key: UIAccessibilityAnnouncementKeyStringValue, type: String.self)
+        wasSuccessful = notification.extract(key: UIAccessibilityAnnouncementKeyWasSuccessful, type: NSNumber.self, transform: DataTransformer.to)
+    }
+}
+
+extension UIAccessibilityElementFocusedNotification.Payload: PassiveNotificationPayload {
+    public init(_ notification: Notification) {
+        element = notification.extract(key: UIAccessibilityFocusedElementKey, type: Any.self)
+    }
+}
+
 extension UIKeyboardNotificationPayload: PassiveNotificationPayload {
     public init(_ notification: Notification) {
         animationCurve = notification.extract(key: UIKeyboardAnimationCurveUserInfoKey, type: NSNumber.self, transform: DataTransformer.to)

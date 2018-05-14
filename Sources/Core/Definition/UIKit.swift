@@ -1,10 +1,27 @@
 //
-//  Keyboard.swift
+//  UIKit.swift
 //  Noti
 //
 //  Created by Wang Wei on 2018/5/11.
 //
 import UIKit
+
+public struct UIAccessibilityAnnouncementDidFinishNotification: AutoPassiveTypedNotification {
+    public struct Payload: AutoPassiveNotificationPayload {
+        //sourcery: key = "UIAccessibilityAnnouncementKeyStringValue"
+        public let announcement: String
+        //sourcery: key = "UIAccessibilityAnnouncementKeyWasSuccessful"
+        //sourcery: type = "NSNumber"
+        public let wasSuccessful: Bool
+    }
+}
+
+public struct UIAccessibilityElementFocusedNotification: AutoPassiveTypedNotification {
+    public struct Payload: AutoPassiveNotificationPayload {
+        //sourcery: key = "UIAccessibilityFocusedElementKey"
+        public let element: Any
+    }
+}
 
 public struct UIKeyboardNotificationPayload: AutoPassiveNotificationPayload {
     //sourcery: key = "UIKeyboardAnimationCurveUserInfoKey"
