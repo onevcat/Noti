@@ -18,3 +18,34 @@ extension AVAudioSessionSilenceSecondaryAudioHintNotification.Payload: PassiveNo
     }
 }
 
+extension AVCaptureDeviceNotificationPayload: PassiveNotificationPayload {
+    public init(_ notification: Notification) {
+        device = notification.object as! AVCaptureDevice
+    }
+}
+
+extension AVCaptureSessionRuntimeErrorNotification.Payload: PassiveNotificationPayload {
+    public init(_ notification: Notification) {
+        error = notification.extract(key: AVCaptureSessionErrorKey, type: Error.self)
+    }
+}
+
+extension AVPlayerItemFailedToPlayToEndTimeNotification.Payload: PassiveNotificationPayload {
+    public init(_ notification: Notification) {
+        item = notification.object as! AVPlayerItem
+        error = notification.extract(key: AVPlayerItemFailedToPlayToEndTimeErrorKey, type: Error.self)
+    }
+}
+
+extension AVPlayerItemNotificationPayload: PassiveNotificationPayload {
+    public init(_ notification: Notification) {
+        item = notification.object as! AVPlayerItem
+    }
+}
+
+extension AVSampleBufferDisplayLayerFailedToDecodeNotification.Payload: PassiveNotificationPayload {
+    public init(_ notification: Notification) {
+        error = notification.extract(key: AVSampleBufferDisplayLayerFailedToDecodeNotificationErrorKey, type: NSError.self)
+    }
+}
+

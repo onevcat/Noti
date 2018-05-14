@@ -80,3 +80,59 @@ public struct AVAudioUnitComponentTagsDidChangeNotification: AutoPassiveTypedNot
     }
 }
 
+public struct AVAssetChapterMetadataGroupsDidChangeNotification: AutoPassiveTypedNotification {}
+public struct AVAssetDurationDidChange: AutoPassiveTypedNotification {}
+public struct AVAssetMediaSelectionGroupsDidChange: AutoPassiveTypedNotification {}
+public struct AVAssetTrackSegmentsDidChange: AutoPassiveTypedNotification {}
+public struct AVAssetTrackTimeRangeDidChange: AutoPassiveTypedNotification {}
+public struct AVAssetTrackTrackAssociationsDidChange: AutoPassiveTypedNotification {}
+
+public struct AVCaptureDeviceNotificationPayload: AutoPassiveNotificationPayload {
+    //sourcery: object = true
+    public let device: AVCaptureDevice
+}
+//sourcery: payload = "AVCaptureDeviceNotificationPayload"
+public struct AVCaptureDeviceWasConnectedNotification: AutoPassiveTypedNotification {}
+//sourcery: payload = "AVCaptureDeviceNotificationPayload"
+public struct AVCaptureDeviceWasDisconnectedNotification: AutoPassiveTypedNotification {}
+
+public struct AVCaptureInputPortFormatDescriptionDidChangeNotification: AutoPassiveTypedNotification {}
+public struct AVCaptureSessionDidStartRunningNotification: AutoPassiveTypedNotification {}
+public struct AVCaptureSessionDidStopRunningNotification: AutoPassiveTypedNotification {}
+public struct AVCaptureSessionRuntimeErrorNotification: AutoPassiveTypedNotification {
+    public struct Payload: AutoPassiveNotificationPayload {
+        //sourcery: key = "AVCaptureSessionErrorKey"
+        public let error: Error
+    }
+}
+
+public struct AVPlayerItemNotificationPayload: AutoPassiveNotificationPayload {
+    //sourcery: object = true
+    public let item: AVPlayerItem
+}
+//sourcery: payload = "AVPlayerItemNotificationPayload"
+public struct AVPlayerItemDidPlayToEndTimeNotification: AutoPassiveTypedNotification {}
+
+public struct AVPlayerItemFailedToPlayToEndTimeNotification: AutoPassiveTypedNotification {
+    public struct Payload: AutoPassiveNotificationPayload {
+        //sourcery: object = true
+        public let item: AVPlayerItem
+        //sourcery: key = "AVPlayerItemFailedToPlayToEndTimeErrorKey"
+        public let error: Error
+    }
+}
+//sourcery: payload = "AVPlayerItemNotificationPayload"
+public struct AVPlayerItemNewAccessLogEntryNotification: AutoPassiveTypedNotification {}
+//sourcery: payload = "AVPlayerItemNotificationPayload"
+public struct AVPlayerItemNewErrorLogEntryNotification: AutoPassiveTypedNotification {}
+//sourcery: payload = "AVPlayerItemNotificationPayload"
+public struct AVPlayerItemPlaybackStalledNotification: AutoPassiveTypedNotification {}
+//sourcery: payload = "AVPlayerItemNotificationPayload"
+public struct AVPlayerItemTimeJumpedNotification: AutoPassiveTypedNotification {}
+
+public struct AVSampleBufferDisplayLayerFailedToDecodeNotification: AutoPassiveTypedNotification {
+    public struct Payload: AutoPassiveNotificationPayload {
+        //sourcery: key = "AVSampleBufferDisplayLayerFailedToDecodeNotificationErrorKey"
+        public let error: NSError
+    }
+}
