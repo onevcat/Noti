@@ -15,6 +15,12 @@ extension NSHTTPCookieManagerAcceptPolicyChangedNotification.Payload: PassiveNot
     }
 }
 
+extension NSHTTPCookieManagerCookiesChangedNotification.Payload: PassiveNotificationPayload {
+    public init(_ notification: Notification) {
+        storage = notification.object as! HTTPCookieStorage
+    }
+}
+
 extension UIKeyboardNotificationPayload: PassiveNotificationPayload {
     public init(_ notification: Notification) {
         animationCurve = notification.extract(key: UIKeyboardAnimationCurveUserInfoKey, type: NSNumber.self, transform: DataTransformer.to)

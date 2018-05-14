@@ -51,6 +51,10 @@ extension NSHTTPCookieManagerAcceptPolicyChangedNotification: PassiveTypedNotifi
     public static let name: Notification.Name = .NSHTTPCookieManagerAcceptPolicyChanged
 }
 
+extension NSHTTPCookieManagerCookiesChangedNotification: PassiveTypedNotification {
+    public static let name: Notification.Name = .NSHTTPCookieManagerCookiesChanged
+}
+
 extension UIKeyboardDidChangeFrameNotification: PassiveTypedNotification {
     public typealias Payload = UIKeyboardNotificationPayload
     public static let name: Notification.Name = .UIKeyboardDidChangeFrame

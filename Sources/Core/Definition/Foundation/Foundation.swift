@@ -68,4 +68,11 @@ public struct NSHTTPCookieManagerAcceptPolicyChangedNotification: AutoPassiveTyp
     }
 }
 
+public struct NSHTTPCookieManagerCookiesChangedNotification: AutoPassiveTypedNotification {
+    public struct Payload: AutoPassiveNotificationPayload {
+        //sourcery: object = true
+        public let storage: HTTPCookieStorage
+    }
+}
+
 
