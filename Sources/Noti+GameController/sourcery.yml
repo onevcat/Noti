@@ -1,0 +1,14 @@
+sources:
+  include:
+    - ./
+    - ../Core
+  exclude:
+    - ../Core/Definition
+args:
+  imports: 
+    - Noti
+    - GameController
+templates:
+  - ../../Templates
+output:
+  ./Generated

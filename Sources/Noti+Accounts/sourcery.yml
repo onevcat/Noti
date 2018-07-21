@@ -1,0 +1,14 @@
+sources:
+  include:
+    - ./
+    - ../Core
+  exclude:
+    - ../Core/Definition
+args:
+  imports: 
+    - Noti
+    - Accounts
+templates:
+  - ../../Templates
+output:
+  ./Generated
